@@ -45,7 +45,7 @@
 }
 #s2 .inner .aboutMe .info dl {
   float: left;
-  padding-right: 40px;
+  padding-right: 50px;
 }
 #s2 .inner .aboutMe .info dl:last-child {
   padding-right: 0;
