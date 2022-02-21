@@ -1,0 +1,387 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+  cursor: url(), auto !important;
+}
+ul:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+a {
+  color: #111;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "배달의민족 주아", sans-serif;
+  text-transform: uppercase;
+}
+
+.hidden {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  font-size: 1px;
+  line-height: 1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/***** header *****/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#header .headerIn {
+  width: 1240px;
+  justify-content: space-between;
+  margin: auto;
+  height: 80px;
+}
+#header .logo {
+  float: left;
+  position: absolute;
+  top: 20px;
+}
+#header .logo a {
+  display: block;
+  vertical-align: middle;
+}
+#header .logo a::before {
+  display: block;
+  content: "";
+  width: 140px;
+  height: 40px;
+  background: url(../images/mylogoL.png) no-repeat;
+  background-size: contain;
+}
+
+#header nav.menu {
+  float: right;
+}
+#header ul {
+  overflow: hidden;
+  margin-top: 18px;
+}
+#header li {
+  float: left;
+}
+#header li a {
+  display: block;
+  padding: 11px 30px;
+  font-size: 18px;
+  color: #d8d8d8;
+  font-weight: bold;
+}
+#header li a:hover,
+#header li a.active {
+  color: #000;
+}
+#header li a:hover.line,
+#header li a.active.line {
+  text-decoration: line-through;
+}
+#header li .contact.active {
+  background: #000;
+  color: #eee;
+}
+.menu a.contact {
+  font-weight: 700;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid #111827;
+  border-bottom-width: 4px;
+  border-radius: 1.875rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #f1f1f1;
+}
+
+#header.glass {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/***** section *****/
+
+section .inner {
+  position: relative;
+  width: 1240px;
+  margin: 0 auto;
+}
+
+/*** s1 ***/
+#s1 {
+  height: 820px;
+  border: 2px solid #f1f1f1;
+  overflow: hidden;
+}
+#s1 .mask01 {
+  position: absolute;
+  width: 180px;
+  height: 780px;
+  top: 0;
+  left: -20px;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  z-index: 7;
+}
+#s1 .mask02 {
+  position: absolute;
+  width: 383px;
+  height: 780px;
+  top: 0;
+  right: 0;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  z-index: 5;
+}
+#s1 .mask03 {
+  position: absolute;
+  width: 180px;
+  height: 780px;
+  top: 0;
+  left: 380px;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  z-index: 7;
+}
+#s1 .mask04 {
+  position: absolute;
+  width: 383px;
+  height: 780px;
+  top: 0;
+  right: -200px;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#s1 .tit {
+  white-space: nowrap;
+}
+#s1 h1 {
+  font-size: 120px;
+  color: #fc88af;
+}
+#s1 .tit .fir {
+  position: absolute;
+  margin-top: 30vh;
+  width: 1240px;
+  right: 0;
+  animation: flow 8s infinite linear;
+  z-index: 6;
+}
+#s1 .tit .sec {
+  position: absolute;
+  margin-top: 52vh;
+  width: 1240px;
+  right: 0;
+  animation: flow 8s 1s infinite linear;
+  z-index: 3;
+}
+
+@keyframes flow {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+#s1 .img {
+  position: absolute;
+  margin-top: 18vh;
+  right: 0;
+  width: 383px;
+  height: 526px;
+  z-index: 5;
+}
+#s1 .img img {
+  width: 100%;
+}
+
+.scroll-box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 36.5rem auto;
+  background: url(../images/blurry.png) no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+.circle-txt {
+  width: 167px;
+  height: auto;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+img.arrow-down {
+  transition: all 0.3s ease-in-out;
+}
+img.arrow-down:hover {
+  transform: scale(1.4);
+}
+
+/*** s2 ***/
+
+#s2 {
+  height: 480px;
+}
+.works {
+  width: 100%;
+}
+.works .work-list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.works .item {
+  width: 48%;
+  border: 1px solid #111827;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.works .thumbail > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.works .desc {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-top: 1px solid #111827;
+}
+.works .desc p {
+  font-weight: 600;
+  margin-left: 20px;
+  font-size: 18px;
+  font-family: "ONE 모바일고딕 OTF", sans-serif;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+.works .desc span {
+  margin-right: 20px;
+  letter-spacing: 1.1px;
+  font-size: 14pxs;
+  text-transform: uppercase;
+}
+.item:hover {
+  background-color: #fff;
+  transform: translate(-7px, -7px);
+}
+.item:hover:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 12px;
+  background-color: #111827;
+  right: -13px;
+  bottom: -13px;
+  display: block;
+}
+.item:hover:after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  background-color: #111827;
+  right: -13px;
+  bottom: -13px;
+  display: block;
+}
+
+/*** s3 ***/
+#s3 {
+  height: 480px;
+}
+/*** s4 ***/
+#s4 {
+  height: 480px;
+}
+
+/***** footer *****/
+footer > div {
+  width: 1240px;
+  margin: auto;
+  color: #333;
+  overflow: hidden;
+  padding: 20px 0;
+  text-align: center;
+}
+footer span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 50px;
+}
+
+footer .topBtn {
+  position: relative;
+  float: right;
+  color: #000;
+  font-weight: bold;
+}
+footer .topBtn span {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+footer .topBtn span::before,
+footer .topBtn span::after {
+  position: absolute;
+  content: "";
+}
+footer .topBtn span::before {
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+footer .topBtn span::after {
+  width: 2px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+footer .topBtn span:hover {
+  background-color: rgba(0, 0, 0, 1);
+}

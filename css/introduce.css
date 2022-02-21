@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+#s1 .inner .tit h1 {
+  text-transform: uppercase;
+}
+#s2 {
+  border: 2px solid red;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+#s2 .inner .aboutMe {
+  display: table;
+}
+#s2 .inner .aboutMe .img {
+  display: table-cell;
+  width: 40%;
+  text-align: center;
+}
+#s2 .inner .aboutMe .img img {
+  width: 80%;
+}
+#s2 .inner .aboutMe .tit {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 80px;
+  width: 60%;
+  font-size: 2em;
+}
+#s2 .inner .aboutMe .tit span {
+  font-family: "ONE 모바일고딕 OTF", sans-serif;
+}
+
+#s2 .inner .aboutMe .tit span.yellow {
+  background-size: 100% 100%;
+  transition: background-size 1.7s ease-in-out 0.3s;
+  background: url("../images/yellow.png");
+}
+
+#s2 .inner .aboutMe .info {
+  margin-top: 70px;
+  padding-left: 80px;
+  font-size: 1.2em;
+  width: 100%;
+  font-family: "ONE 모바일고딕 OTF", sans-serif;
+}
+#s2 .inner .aboutMe .info dl {
+  float: left;
+  padding-right: 40px;
+}
+#s2 .inner .aboutMe .info dl:last-child {
+  padding-right: 0;
+}
+
+#s2 .inner .aboutMe .info dt {
+  padding-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#s3 p,
+#s4 p {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
