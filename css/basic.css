@@ -1,13 +1,54 @@
 @charset "UTF-8";
-
+/* 기본 색상 변수에 담기 */
+html {
+  --color-texta: #fc88af;
+  --color-textb: #fff;
+}
 * {
   box-sizing: border-box;
 }
 body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
-  background-color: #f1f1f1;
-  cursor: url(), auto !important;
+  background: #f4f4f4 url(../img/bg.png);
+  cursor: none;
 }
+/* 커스텀 커서 스타일 정의해주기 */
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--color-texta);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  backdrop-filter: sepia(20%);
+  background-size: cover;
+}
+/* 마우스 오버됐을 때 커스텀 커서 스타일 */
+.cursor-grow {
+  transform: scale(1.2);
+  background-color: var(--color-texta);
+}
+/* 점선이 들어갈 ::after(pseudo)요소 만들고 크기값 설정해주기*/
+a:hover::after {
+  width: calc(100% - 2rem);
+  height: 3px;
+  background-size: contain; /* 배경 이미지가 알맞게 들어가도록*/
+}
+
+/* hover된 링크의 배경 색상 정의(하얀색)
+.hovered-link {
+  background-color: var(--color-textb) !important;
+}*/
+/* a:hover::after의 svg에 배경이미지 지정!*/
+.hovered-link::after {
+  background-image: url("../images/mouse.png");
+}
+
 ul:after {
   display: block;
   content: "";
@@ -69,7 +110,7 @@ h5 {
   content: "";
   width: 140px;
   height: 40px;
-  background: url(../images/mylogoL.png) no-repeat;
+  background: url(../images/mylogo.png) no-repeat;
   background-size: contain;
 }
 
@@ -136,13 +177,13 @@ section .inner {
 #s1 .mask01 {
   position: absolute;
   width: 180px;
-  height: 780px;
+  height: 380px;
   top: 0;
   left: -20px;
   background-color: #f1f1f1;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  z-index: 7;
+  z-index: 6;
 }
 #s1 .mask02 {
   position: absolute;
@@ -164,45 +205,68 @@ section .inner {
   background-color: #f1f1f1;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  z-index: 7;
+  z-index: 9;
 }
 #s1 .mask04 {
   position: absolute;
   width: 383px;
-  height: 780px;
+  height: 380px;
   top: 0;
   right: -200px;
   background-color: #f1f1f1;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
 }
+#s1 .mask05 {
+  position: absolute;
+  width: 401px;
+  height: 420px;
+  top: calc(28vh + 120px);
+  left: 159px;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  z-index: 7;
+}
+#s1 .mask06 {
+  position: absolute;
+  width: 180px;
+  height: 380px;
+  top: 380px;
+  left: -20px;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  z-index: 3;
+}
+
 #s1 .tit {
   white-space: nowrap;
 }
 #s1 h1 {
-  font-size: 120px;
+  font-size: 112px;
   color: #fc88af;
 }
 #s1 .tit .fir {
   position: absolute;
-  margin-top: 30vh;
+  margin-top: 28vh;
   width: 1240px;
   right: 0;
   animation: flow 8s infinite linear;
-  z-index: 6;
+  z-index: 3;
 }
 #s1 .tit .sec {
   position: absolute;
   margin-top: 52vh;
   width: 1240px;
-  right: 0;
-  animation: flow 8s 1s infinite linear;
-  z-index: 3;
+  right: 8.6em;
+  animation: flow 8s 0.2s infinite linear;
+  z-index: 6;
 }
 
 @keyframes flow {
   0% {
-    right: 0;
+    right: 8.6em;
   }
   100% {
     right: 100%;
@@ -329,9 +393,52 @@ img.arrow-down:hover {
 /*** s4 ***/
 #s4 {
   height: 480px;
+  border-bottom: 1px solid #aaa;
 }
 
+/*** s5, s6 ***/
+#s5 {
+  height: 380px;
+  margin-top: 50px;
+}
+#s6 {
+  height: 380px;
+  margin-top: 50px;
+}
+#s5 .works .item,
+#s6 .works .item {
+  width: 30%;
+  height: 30%;
+}
+#s5 .works .item .thumbail,
+#s6 .works .item .thumbail {
+  overflow: hidden;
+  width: 100%;
+}
+#s5 .works .item .thumbail img,
+#s6 .works .item .thumbail img {
+  height: 17.64em;
+  object-fit: cover;
+  object-position: center top;
+}
+#s5 .title {
+  text-align: center;
+}
+#s5 .title p {
+  text-transform: uppercase;
+  font-size: 4em;
+  font-family: "ONE 모바일고딕 OTF", sans-serif;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(85, 85, 85);
+}
 /***** footer *****/
+footer {
+  margin-top: 50px;
+}
 footer > div {
   width: 1240px;
   margin: auto;

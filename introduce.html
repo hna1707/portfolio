@@ -8,13 +8,19 @@
     <title>portfolio</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/introduce.css">
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/main.js"></script>
 </head>
 
 <body>
     <header id="header">
+        <div class="cursor"></div>
         <div class="headerIn">
             <div class="logo">
                 <a href="https://hna1707.github.io/portfolio/">
@@ -25,7 +31,7 @@
                 <ul>
                     <li><a href="./index.html" class="line">WORKS</a></li>
                     <li><a href="./introduce.html" class="line active">ABOUT</a></li>
-                    <li><a href="#" class="contact">CONTACT</a></li>
+                    <li><a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=hna1707@gmail.com&tf=cm" class="contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,6 +43,8 @@
             <div class="mask02"></div>
             <div class="mask03"></div>
             <div class="mask04"></div>
+            <div class="mask05"></div>
+            <div class="mask06"></div>
             <div class="tit">
                 <div class="fir">
                     <h1>nice to nice to nice to nice to nice to nice to nice to nice to nice to nice to</h1>
@@ -57,56 +65,126 @@
         <div class="inner">
             <div class="aboutMe">
                 <div class="img">
-                    <img src="images/myC2.png" alt="">
+                    <img src="images/myC2.png" alt="" class="wow bounceInUp">
                 </div>
                 <div class="text">
-                    <div class="tit">
-                        <span>
-                            저의 목표는<br>
-                            <span class="yellow">소비자의 니즈를 발굴하고<br>분석을 통한 결과로<br>서비스를 만들어내는 디자이너입니다.</span>
-                        </span>
+                    <div class="tit action wow bounceInUp" data-wow-delay="100ms">
+                        <p>저의 목표는</p><br>
+                        <p>소비자의 니즈를 발굴하고<span class="yellow"></span></p><br>
+                        
+                        <p>분석을 통한 결과로<span class="yellow"></span></p><br>
+                        
+                        <p>서비스를 만들어내는 디자이너입니다.<span class="yellow"></span></p>
+                        
                     </div>
-                    <div class="info">
+                    <div class="info wow bounceInUp" data-wow-delay="300ms">
                         <dl>
                             <dt>Name</dt>
                             <dd><span>나하나</span></dd>
                         </dl>
-                        <dl>
+                        <dl>    
                             <dt>Birth</dt>
                             <dd><span>1991.07.17</span></dd>
                         </dl>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <section id="s3">
         <div class="inner">
-            <div class="do">
+            <div class="skill">
                 <div class="tit">
-                    <p>what i do</p>
+                    <p class="wow bounceInUp">What I do</p>
+                </div>
+                <div class="elementors">
+                    <div class="el-container wow bounceInUp" data-wow-delay="100ms">
+                        <div class="el-item"><img src="images/html5-logo.png" alt="html5 logo"></div>
+                        <div class="el-item"><img src="images/css-logo.png" alt="css logo"></div>
+                        <div class="el-item"><img src="images/js-logo.png" alt="js logo"></div>
+                        <div class="el-item"><img src="images/jquery-logo.png" alt="jquery logo"></div>
+                        <div class="el-item"><img src="images/bootstrap-logo.png" alt="bootstrap logo"></div>
+                    </div>
+                    <div class="el-container sub wow bounceInUp" data-wow-delay="300ms">
+                        <div class="el-item"><img src="images/adobe_photoshop_icon.png" alt="photoshop icon"></div>
+                        <div class="el-item"><img src="images/adobe_ai_illustrator_icon.png" alt="illustrator icon">
+                        </div>
+                        <div class="el-item"><img src="images/adobe_xd_icon.png" alt="adobe xd icon"></div>
+                        <div class="el-item"><img src="images/adobe_pro_icon.png" alt="primier pro icon"></div>
+                        <div class="el-item"><img src="images/adobe_aftereffects_icon.png" alt="after effects icon">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="s4">
         <div class="inner">
-            <div class="skill">
-                <div class="tit">
-                    <p>contact</p>
+            <div class="title">
+                <div class="Text">
+                    <span>I am always</span>
+                    <span>expected for you.</span>
+                    <span>Let’s build something</span>
+                    <span>great together.</span>
                 </div>
-                <div class="slider">
-                    <div class="img"></div>
+            </div>
+            <div class="slider">
+                <div class="slide-list">
+                    <div class="slide-item">
+                        <img src="images/slide01.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/slide03.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/slide05.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/slide04.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/slide06.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+    </section>
+    <section id="s5">
+        <div class="inner">
+            <div class="feature">
+                <strong class="feature-title wow bounceInUp">let's work<br>t💗gether!</strong>
+                <div class="feature-content">
+                    <div class="feature-list wow bounceInUp" data-wow-delay="100ms">
+                        <span class="feature-list-item">역량과 경험을 갖춘 웹 퍼블리셔가 필요할 때</span >
+                        <span  class="feature-list-item">책임감 있고 함께 일할 때 시너지를 주는 팀원이 필요할 때</span >
+                        <span  class="feature-list-item">성장하지만 겸손을 잃지 않는 사람이 필요할 때</span >
+                        <span  class="feature-list-item"><strong class="accent">좋아하는 일을 잘하는 사람이 필요할 때</strong></span >
+                    </div>
+                    <a href="https://nonchalant-field-c29.notion.site/ba7b43f8dc9045fab85135612a6e1895" target="_blank" class="feature-btn wow bounceInUp" data-wow-delay="200ms">
+                        <span class="btn-text">이력서 (링크)</span><span class="line"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s6">
+        <div class="inner">
+            <div class="contact">
+                <span class="icon wow bounceInUp"></span>
+                <strong class="contact-title wow bounceInUp" data-wow-delay="100ms">우리의 만남은 언제나 열려 있고,<br>지금 이 순간에도 저는 당신을 기다리고 있어요.</strong>
+                <div class="contact-info wow bounceInUp" data-wow-delay="200ms">
+                    <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=hna1707@gmail.com&tf=cm" class="contact-mail">hna1707@gmail.com</a>
+                    <p class="contact-text">메일을 보내주시면 평일 기준 2일 내로 답장을 드릴게요.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
     <footer>
         <div>
-            <span>© 2022 HANA’s Portfolio</span>
+            <span>© HANA’s Portfolio 2022</span>
             <a href="#" class="topBtn"><span></span></a>
         </div>
     </footer>

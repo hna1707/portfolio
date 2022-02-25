@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/basic.css">
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/main.js"></script>
 </head>
 <body>
     <header id="header">
+        <div class="cursor"></div>
         <div class="headerIn">
             <div class="logo">
                 <a href="https://hna1707.github.io/portfolio/">
@@ -22,7 +28,7 @@
                 <ul>
                     <li><a href="./index.html" class="line active">WORKS</a></li>
                     <li><a href="./introduce.html" class="line">ABOUT</a></li>
-                    <li><a href="#" class="contact">CONTACT</a></li>
+                    <li><a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=hna1707@gmail.com&tf=cm" class="contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>        
@@ -34,9 +40,11 @@
             <div class="mask02"></div>
             <div class="mask03"></div>
             <div class="mask04"></div>
+            <div class="mask05"></div>
+            <div class="mask06"></div>
             <div class="tit">
-                <div class="fir"><h1>안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요, 안녕하세요,</h1></div>
-                <div class="sec"><h1>저는 나하나입니다 :) 저는 나하나입니다 :) 저는 나하나입니다 :) 저는 나하나입니다 :) 저는 나하나입니다 :)</h1></div>
+                <div class="fir"><h1>hello,&nbsp;&nbsp;hello,&nbsp;&nbsp;hello,&nbsp;&nbsp;hello,&nbsp;&nbsp;hello,&nbsp;&nbsp;hello,&nbsp;&nbsp;hello,&nbsp;&nbsp;</h1></div>
+                <div class="sec"><h1>I'm 하나!&nbsp;:)&nbsp;&nbsp;I'm 하나!&nbsp;:)&nbsp;&nbsp;I'm 하나!&nbsp;:)&nbsp;&nbsp;I'm 하나!&nbsp;:)&nbsp;&nbsp;I'm 하나!&nbsp;:)</h1></div>
                 
             </div>
             <div class="img">
@@ -45,8 +53,8 @@
         </div>
         <div class="scroll-box">
             <a href="#s2">
-                <img class="circle-txt" src="images/circle-txt.png">
-                <img class="arrow-down" src="images/arrow-down.svg">
+                <img class="circle-txt" src="images/circle-txt.png" alt="">
+                <img class="arrow-down" src="images/arrow-down.svg" alt="">
             </a>
           </div>
     </section>
@@ -63,7 +71,7 @@
                             <div class="desc">
                                 <p>해양환경공단</p>
                                 <span class="visit-btn">Visit Store
-                                    <img src="images/arrow-up-right.svg">
+                                    <img src="images/arrow-up-right.svg" alt="">
                                 </span>
                             </div>
                         </a>
@@ -76,7 +84,7 @@
                             <div class="desc">
                                 <p>art in culture</p>
                                 <span class="visit-btn">Visit Store
-                                    <img src="images/arrow-up-right.svg">
+                                    <img src="images/arrow-up-right.svg" alt="">
                                 </span>
                             </div>
                         </a>
@@ -97,7 +105,7 @@
                             <div class="desc">
                                 <p>서울대공원 동물원</p>
                                 <span class="visit-btn">Visit Store
-                                    <img src="images/arrow-up-right.svg">
+                                    <img src="images/arrow-up-right.svg" alt="">
                                 </span>
                             </div>
                         </a>
@@ -110,7 +118,7 @@
                             <div class="desc">
                                 <p>egiazki</p>
                                 <span class="visit-btn">Visit Store
-                                    <img src="images/arrow-up-right.svg">
+                                    <img src="images/arrow-up-right.svg" alt="">
                                 </span>
                             </div>
                         </a>
@@ -131,20 +139,20 @@
                             <div class="desc">
                                 <p>tesla model3</p>
                                 <span class="visit-btn">Visit Store
-                                    <img src="images/arrow-up-right.svg">
+                                    <img src="images/arrow-up-right.svg" alt="">
                                 </span>
                             </div>
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#">
+                        <a target="_blank"  href="https://hna1707.github.io/wedding/#">
                             <figuar class="thumbail">
                                 <img src="images/wedding.jpg" alt="wedding">
                             </figuar>
                             <div class="desc">
                                 <p>wedding</p>
                                 <span class="visit-btn">Visit Store
-                                    <img src="images/arrow-up-right.svg">
+                                    <img src="images/arrow-up-right.svg" alt="">
                                 </span>
                             </div>
                         </a>
@@ -153,11 +161,103 @@
             </div>
         </div>
     </section>
-    
-
+    <section id="s5">
+        <div class="inner">
+            <div class="works">
+                <div class="work-list">
+                    <div class="item">
+                        <a href="#">
+                            <a href="images/3d_modeling_mapping.jpg" class="thumbail" data-lightbox="gallery" data-title="3d modeling mapping">
+                                <img src="images/3d_modeling_mapping.jpg" alt="3d_modeling_mapping">
+                            </a>
+                            <div class="desc">
+                                <p>3d modeling mapping</p>
+                                <span class="visit-btn">view
+                                    <img src="images/arrow-up-right.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <a href="images/luna.jpg" class="thumbail" data-lightbox="gallery" data-title="상세페이지">
+                                <img src="images/luna.jpg" alt="펜할리곤스 루나">
+                            </a>
+                            <div class="desc">
+                                <p>상세페이지</p>
+                                <span class="visit-btn">view
+                                    <img src="images/arrow-up-right.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <a href="images/mask.jpg" class="thumbail" data-lightbox="gallery" data-title="mask">
+                                <img src="images/mask.jpg" alt="포도">
+                            </a>
+                            <div class="desc">
+                                <p>Mask</p>
+                                <span class="visit-btn">view
+                                    <img src="images/arrow-up-right.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s6">
+        <div class="inner">
+            <div class="works">
+                <div class="work-list">
+                    <div class="item">
+                        <a href="#">
+                            <a href="images/영화포스터.jpg" class="thumbail" data-lightbox="gallery" data-title="영화포스터">
+                                <img src="images/영화포스터.jpg" alt="영화포스터">
+                            </a>
+                            <div class="desc">
+                                <p>영화포스터</p>
+                                <span class="visit-btn">view
+                                    <img src="images/arrow-up-right.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <a href="images/화장품광고.jpg" class="thumbail" data-lightbox="gallery" data-title="화장품광고">
+                                <img src="images/화장품광고.jpg" alt="회징품광고">
+                            </a>
+                            <div class="desc">
+                                <p>화장품광고</p>
+                                <span class="visit-btn">view
+                                    <img src="images/arrow-up-right.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <a href="images/레이어드.jpg" class="thumbail" data-lightbox="gallery" data-title="일러스트">
+                                <img src="images/레이어드.jpg" alt="고양이">
+                            </a>
+                            <div class="desc">
+                                <p>일러스트</p>
+                                <span class="visit-btn">view
+                                    <img src="images/arrow-up-right.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div>
-            <span>© 2022 HANA’s Portfolio</span>
+            <span>© HANA’s Portfolio 2022</span>
             <a href="#" class="topBtn"><span></span></a>
         </div>
     </footer> 
