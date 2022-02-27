@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 배달의민족 주아;
+  src: url(../fonts/BMJUA.eot);
+  src: local("Bodoni"), url(../fonts/BMJUA.woff) format("woff"),
+    url(../fonts/BMJUA_ttf.ttf) format("truetype");
+  font-family: ONE 모바일고딕 OTF;
+  src: url(../fonts/ONE\ Mobile\ Regular.eot);
+  src: local("Bodoni"), url(../fonts/ONE\ Mobile\ Regular.woff) format("woff"),
+    url(../fonts/ONE\ Mobile\ Regular.ttf) format("truetype");
+}
+
 /* 기본 색상 변수에 담기 */
 html {
   --color-texta: #fc88af;
@@ -358,7 +369,7 @@ img.arrow-down:hover {
 .works .desc span {
   margin-right: 20px;
   letter-spacing: 1.1px;
-  font-size: 14pxs;
+  font-size: 14px;
   text-transform: uppercase;
 }
 .item:hover {

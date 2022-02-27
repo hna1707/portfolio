@@ -57,18 +57,18 @@ $(function(){
           mouseCursor.style.left = e.pageX + "px";
           mouseCursor.style.top = e.pageY - scrollY + "px";
       }
-      Links.forEach((link) => {
-        link.addEventListener("mouseover", () => {
-          mouseCursor.classList.add("link-grow");
-          mouseCursor.style.zIndex = "-1";
-          link.classList.add("hovered-link");
+        Links.forEach((link) => {
+            link.addEventListener("mouseover", () => {
+            mouseCursor.classList.add("link-grow");
+            mouseCursor.style.zIndex = "-1";
+            link.classList.add("hovered-link");
+            });
+            link.addEventListener("mouseleave", () => {
+            mouseCursor.classList.remove("link-grow");
+            mouseCursor.style.zIndex = "1000";
+            link.classList.remove("hovered-link");
+            });
         });
-        link.addEventListener("mouseleave", () => {
-          mouseCursor.classList.remove("link-grow");
-          mouseCursor.style.zIndex = "1000";
-          link.classList.remove("hovered-link");
-        });
-      });
 
         new WOW().init();
 
