@@ -1,36 +1,79 @@
 @charset "UTF-8";
 /*** section.s1 ***/
-#s1 .inner .tit h1 {
-  text-transform: uppercase;
+
+#s01 {
+  height: 820px;
+  overflow: hidden;
+}
+
+.scroll-box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: -7.5rem auto;
+  background: url(../images/blurry.png) no-repeat;
+  background-size: cover;
+  z-index: 10;
+  animation: showUp 1s 3s linear;
+}
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.circle-txt {
+  width: 167px;
+  height: auto;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+img.arrow-down {
+  transition: all 0.3s ease-in-out;
+}
+img.arrow-down:hover {
+  transform: scale(1.4);
 }
 
 /*** section.s2 ***/
-#s2 {
-  height: 520px;
-}
-#s2 {
+#s02 {
+  height: 720px;
   overflow: hidden;
-  margin-bottom: 30px;
 }
-#s2 .aboutMe {
+#s02 .aboutMe {
   display: table;
+  padding-top: 100px;
 }
-#s2 .aboutMe .img {
+#s02 .aboutMe > div {
   display: table-cell;
+  vertical-align: middle;
+}
+#s02 .aboutMe .img {
   width: 40%;
   text-align: center;
 }
-#s2 .aboutMe .img img {
+#s02 .aboutMe .img img {
   width: 80%;
 }
-#s2 .aboutMe .tit {
-  display: table-cell;
-  vertical-align: middle;
+#s02 .aboutMe .tit {
   padding-left: 80px;
   width: 60%;
   font-size: 2em;
 }
-#s2 .aboutMe .tit p {
+#s02 .aboutMe .tit p {
   font-family: "ONE 모바일고딕 OTF", sans-serif;
   position: relative;
   overflow: hidden;
@@ -38,7 +81,7 @@
   display: inline-block;
 }
 
-#s2 .aboutMe .tit .yellow {
+#s02 .aboutMe .tit .yellow {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -46,11 +89,12 @@
   width: 0;
   background-size: 100% 100%;
   transition: 1.7s ease-in-out 0.3s;
-  background: url("../images/yellow.png");
+  background: url("../images/yellow.png") center bottom;
+  background-size: contain;
   z-index: -1;
   animation-name: high;
   animation-duration: 2000ms;
-  animation-delay: 1800ms;
+  animation-delay: 2500ms;
   animation-fill-mode: forwards;
 }
 
@@ -63,38 +107,38 @@
   }
 }
 
-#s2 .aboutMe .info {
+#s02 .aboutMe .info {
   margin-top: 70px;
   padding-left: 80px;
   font-size: 1.2em;
   width: 100%;
   font-family: "ONE 모바일고딕 OTF", sans-serif;
 }
-#s2 .aboutMe .info dl {
+#s02 .aboutMe .info dl {
   float: left;
   padding-right: 50px;
 }
-#s2 .aboutMe .info dl:last-child {
+#s02 .aboutMe .info dl:last-child {
   padding-right: 0;
 }
 
-#s2 .aboutMe .info dt {
+#s02 .aboutMe .info dt {
   padding-bottom: 20px;
   font-size: 1.2em;
   font-weight: 600;
 }
 
 /*** section.s3 ***/
-#s3 {
+#s03 {
   height: 720px;
 }
-#s3 .skill {
+#s03 .skill {
   padding: 30px 0;
 }
-#s3 .tit {
+#s03 .tit {
   text-align: center;
 }
-#s3 p {
+#s03 p {
   position: relative;
   display: inline-block;
   font-size: 5.8em;
@@ -105,27 +149,27 @@
   -webkit-text-stroke-color: #3e87f8;
 }
 
-#s3 .elementors {
+#s03 .elementors {
   margin-top: 50px;
 }
-#s3 .elementors .el-container {
+#s03 .elementors .el-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#s3 .elementors .el-container:first-child {
+#s03 .elementors .el-container:first-child {
   margin-bottom: 200px;
 }
-#s3 .elementors .el-item {
+#s03 .elementors .el-item {
   width: 96px;
 }
-#s3 .elementors .el-item img {
+#s03 .elementors .el-item img {
   width: 100%;
 }
-#s3 .elementors .el-container.sub {
+#s03 .elementors .el-container.sub {
   position: relative;
 }
-#s3 .elementors .el-container.sub::before {
+#s03 .elementors .el-container.sub::before {
   position: absolute;
   content: "and";
   color: #3e87f8;
@@ -136,19 +180,19 @@
 }
 
 /*** section.s4 ***/
-#s4 {
+#s04 {
   height: 720px;
   overflow: hidden;
 }
-#s4 .inner {
-  padding-top: 80px;
+#s04 .inner {
+  padding-top: 120px;
   position: relative;
 }
-#s4 .title .Text {
+#s04 .title .Text {
   margin-top: 50px;
   padding-left: 120px;
 }
-#s4 .title .Text span {
+#s04 .title .Text span {
   display: block;
   letter-spacing: 0;
   word-spacing: -1px;
@@ -175,34 +219,34 @@
     color: #006cff;
   }
 }
-#s4 .slider {
+#s04 .slider {
   position: absolute;
-  top: 16%;
+  top: 20%;
   left: 55%;
   width: 100%;
   z-index: -1;
 }
-#s4 .slide-list {
+#s04 .slide-list {
 }
-#s4 .slide-list .slide-item {
+#s04 .slide-list .slide-item {
   display: inline-block;
 }
-#s4 .slide-list .slide-item img {
+#s04 .slide-list .slide-item img {
   overflow: hidden;
 }
 
 /*** section.s5 ***/
-#s5 {
+#s05 {
   height: 520px;
 }
-#s5 .inner {
+#s05 .inner {
   padding-top: 180px;
 }
-#s5 .feature {
+#s05 .feature {
   display: flex;
   justify-content: center;
 }
-#s5 .feature-title {
+#s05 .feature-title {
   position: relative;
   display: block;
   margin-right: 162px;
@@ -212,7 +256,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-#s5 .feature-title::after {
+#s05 .feature-title::after {
   position: absolute;
   top: -50px;
   right: -50px;
@@ -223,14 +267,14 @@
   background-color: #8b8b8b;
 }
 
-#s5 .feature-list-item {
+#s05 .feature-list-item {
   display: block;
   font-size: 1.2em;
   font-weight: 400;
   line-height: 2.3;
 }
 
-#s5 .feature-btn {
+#s05 .feature-btn {
   display: inline-block;
   margin-top: 47px;
   padding: 20px 30px;
@@ -239,7 +283,7 @@
   overflow: hidden;
 }
 
-#s5 .feature-btn .line {
+#s05 .feature-btn .line {
   position: relative;
   display: inline-block;
   min-width: 70px;
@@ -249,7 +293,7 @@
   margin-left: 21px;
   background: #333;
 }
-#s5 .feature-btn .line::after {
+#s05 .feature-btn .line::after {
   position: absolute;
   content: "";
   width: 8px;
@@ -262,22 +306,22 @@
 }
 
 /*** section.s5 ***/
-#s6 {
+#s06 {
   height: 520px;
 }
-#s6 .contact {
+#s06 .contact-wrqp {
   position: relative;
   text-align: center;
   margin-top: 220px;
 }
-#s6 .contact .icon {
+#s06 .contact-wrqp .icon {
   display: inline-block;
   width: 40px;
   height: 40px;
   background: url(../images/heart_icon.png) no-repeat center center / cover;
 }
 
-#s6 .contact-title {
+#s06 .contact-title {
   display: block;
   margin: 30px 0 70px;
   text-align: center;
@@ -287,7 +331,7 @@
   font-family: "ONE 모바일고딕 OTF", sans-serif;
 }
 
-#s6 .contact-mail {
+#s06 .contact-mail {
   display: block;
   text-align: center;
   font-size: 82px;
@@ -295,7 +339,7 @@
   animation: colorChange 3s ease infinite;
   transition: all 0.3s;
 }
-#s6 .contact-text {
+#s06 .contact-text {
   margin-top: 26px;
   font-size: 16px;
   line-height: 170%;
