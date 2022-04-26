@@ -212,7 +212,7 @@ section .inner {
   position: absolute;
   display: table;
   right: 10%;
-  margin-top: 36vh;
+  margin-top: 34vh;
   opacity: 0;
   animation: show 1200ms 3s forwards linear;
 }
@@ -605,4 +605,27 @@ button {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+@media screen and (max-width: 1310px) {
+  #header .headerIn,
+  section .inner {  
+   width: 1180px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #header .headerIn,
+  section .inner {
+   width: 1060px;
+  }
+  #s02, #s03, #s04, #s05, #s06  {
+    height: 420px;
+  }
+  .works .work-list {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 640px) {
+
 }
