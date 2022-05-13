@@ -89,10 +89,9 @@ img {
 }
 
 h1 {
-  font-family: "Gaegu", cursive;
-  font-size: 9rem;
+  font-family: "Malgunbd", serif;
+  font-size: 7rem;
   font-weight: 100;
-  letter-spacing: -15px;
   color: #111;
 }
 
@@ -611,6 +610,10 @@ button {
   #header .headerIn,
   section .inner {  
    width: 1180px;
+  }
+  #s01 .tit .fir {
+    margin-top: 24vh;
+    width: 1180px;
   }
 }
 
